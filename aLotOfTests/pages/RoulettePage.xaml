@@ -1,0 +1,21 @@
+﻿<Page x:Class="aLotOfTests.pages.RoulettePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:aLotOfTests.pages" xmlns:chartingToolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+      mc:Ignorable="d" 
+      Style="{DynamicResource bPage}"
+      Title="RoulettePage">
+
+    <Grid>
+        <Border Style="{DynamicResource bBorder}">
+            <chartingToolkit:Chart x:Name="pieChart" Title="another annoying piece of trash">
+                <chartingToolkit:PieSeries Visibility="Visible" x:Name="pieSeries"
+                                  DependentValuePath="Value" IndependentValuePath="key"
+                                       ItemsSource="{Binding}"
+                                       IsSelectionEnabled="False" />
+            </chartingToolkit:Chart>
+        </Border>
+    </Grid>
+</Page>

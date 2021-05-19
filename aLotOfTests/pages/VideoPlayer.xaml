@@ -1,0 +1,27 @@
+﻿<Page x:Class="aLotOfTests.pages.VideoPlayer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:aLotOfTests.pages"
+      mc:Ignorable="d" 
+      Style="{DynamicResource bPage}" AllowDrop="True" Drop="Page_Drop"
+      Title="VideoPlayer">
+
+    <Grid>
+        <Border x:Name="FirstVarBorder" Visibility="Visible" Style="{DynamicResource bBorder}">
+            <StackPanel Margin="5 15 5 0">
+                <MediaElement Name="mainMedia" Margin="0 0 0 10" Height="250" MediaOpened="mainMedia_MediaOpened"/>
+                <TextBlock Name="lblStatus" Text="Не играец..." HorizontalAlignment="Center" Margin="5" />
+                <Slider x:Name="MediaSlider" Width="250" ValueChanged="MediaSlider_ValueChanged" PreviewMouseDown="MediaSlider_PreviewMouseDown" PreviewMouseUp="MediaSlider_PreviewMouseUp"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Style="{DynamicResource ButtonStyle}" Name="PlayBtm" Margin="10 0" Content="ВКЛ." Click="PlayBtm_Click"/>
+                    <Button Style="{DynamicResource ButtonStyle}" Name="PauseBtn" Margin="10 0" Content="ПАУЗА" Click="PauseBtn_Click"/>
+                    <Button Style="{DynamicResource ButtonStyle}" Name="StopBtn" Margin="10 0" Content="СТОП" Click="StopBtn_Click"/>
+                    <Slider x:Name="VolumeSlider" Width="75" Maximum="1" SmallChange="0.01" Value="1" ValueChanged="VolumeSlider_ValueChanged"/>
+                </StackPanel>
+                <ProgressBar x:Name="VideoTimeProgress" Width="250" Height="15" Margin="0 5 0 0" Minimum="0" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

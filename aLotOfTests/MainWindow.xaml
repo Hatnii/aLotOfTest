@@ -31,14 +31,14 @@
             <TabItem Header="AT">
                 <Button Content="внесение и удаление из массива" x:Name="RandomGenAnimeList" Click="RandomGenAnimeList_Click"/>
             </TabItem>  
-            <TabItem Header="OK">
-                
+            <TabItem Header="RT">
+                <Button Content="Рулетка получается" Name="RouletteGo" Click="RouletteGo_Click"/>
             </TabItem>  
-            <TabItem Header="OK">
-                
+            <TabItem Header="VP">
+                <Button Content="Видео плеер" Name="VideoPlayerGo" Click="VideoPlayerGo_Click" />
             </TabItem>  
-            <TabItem Header="OK">
-                
+            <TabItem Header="AP">
+                <Button Content="Аудио плеер" Name="AudioPlayerGo" Click="AudioPlayerGo_Click"/>
             </TabItem>  
             <TabItem Header="OK">
                 

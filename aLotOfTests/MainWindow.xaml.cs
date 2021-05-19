@@ -56,5 +56,20 @@ namespace aLotOfTests
         {
             mainFrame.Content = new pages.ArrayTest();
         }
+
+        private void RouletteGo_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = new pages.RoulettePage();
+        }
+
+        private void VideoPlayerGo_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = new pages.VideoPlayer();
+        }
+
+        private void AudioPlayerGo_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = new pages.AudioPlayer();
+        }
     }
 }

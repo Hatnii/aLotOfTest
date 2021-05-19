@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetProjects.DataVisualization.Toolkit, Version=6.0.90.0, Culture=neutral, PublicKeyToken=79778c5f2eed289b, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetProjects.WpfToolkit.DataVisualization.6.0.90\lib\net40\DotNetProjects.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
@@ -72,6 +75,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="pages\AudioPlayer.xaml.cs">
+      <DependentUpon>AudioPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\RoulettePage.xaml.cs">
+      <DependentUpon>RoulettePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\VideoPlayer.xaml.cs">
+      <DependentUpon>VideoPlayer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Series.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -89,6 +101,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\AudioPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\ComboBoxTrashStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,11 +117,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\RoulettePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\SaveLoadTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\Timer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\VideoPlayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +182,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,6 +202,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\1991.png" />
+    <Content Include="Resource\Dulo.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
